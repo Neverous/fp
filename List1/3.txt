@@ -1,0 +1,3 @@
+#f 1
+> 11
+# ponieważ utożsamiamy zmienną z wartością a nie miejscem w pamięci

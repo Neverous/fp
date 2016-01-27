@@ -1,0 +1,9 @@
+let apply f g = f g;;
+
+let rec iterate f = function
+    | 0     -> fun x -> x
+    | 1     -> f
+    | times -> fun x -> apply f (iterate f (times - 1) x);;
+
+let multiply x y = iterate ((+) x) y 0;;
+let ( *** ) x y = iterate (( * ) x) y 1;;

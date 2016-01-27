@@ -1,0 +1,35 @@
+#if true then 4 else 5;;
+> 4
+
+#if false then 1 else 3.5;;
+> ERROR (int vs float)
+
+#4.75 + 2.34;;
+> ERROR (+.)
+
+#false || "ab">"cd";;
+> false
+
+#if true then ();;
+> ()
+
+#if false then () else 4;;
+> ERROR (unit vs int)
+
+#let x = 2 in x^"aa";;
+> ERROR (string vs int)
+
+#let y = "abc" in y^y;;
+> abcabc
+
+#(fun x -> x.[1]) "abcdef";;
+> 'b'
+
+#(fun x -> x) true;;
+> true
+
+#let x = [1;2] in x@x;;
+> [1; 2; 1; 2]
+
+#let rec f f = f+f in f 42;;
+> 84

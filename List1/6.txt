@@ -1,0 +1,4 @@
+a' -> a'
+fun (x: int) -> x ; fun x -> x + 0
+fun a b c -> a (b c);;
+let rec f x = f x;;

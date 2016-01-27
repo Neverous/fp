@@ -1,0 +1,7 @@
+#let g x y = x in g 7 (1/0);;
+[wyjatek]
+
+vs haskell:
+let g x y = x
+>g 7 (1/0)
+7
